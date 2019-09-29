@@ -18,6 +18,11 @@ class Creature:
 class Wizard(Creature):
 
     def attack(self, creature):
+        """
+        Execute a series of rolls and compare to determine winner.
+        :param creature: the enemy of the player being compared
+        :return: Bool true if player won and prints corresponding message.
+        """
         print("The wizard {} attacks {}!".format(
             self.name, creature.name
         ))
@@ -34,6 +39,9 @@ class Wizard(Creature):
         else:
             print("The wizard has been DEFEATED!!!")
             return False
+
+    def wake_up(self):
+        print("I'm awake, I'm awake!")
 
 
 class SmallAnimal(Creature):
